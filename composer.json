@@ -1,0 +1,12 @@
+{
+    "name": "a/web-scraper",
+    "authors": [
+        {
+            "name": "assandra",
+            "email": "assandrafalls1@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.0"
+    }
+}

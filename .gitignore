@@ -2,4 +2,5 @@ additional-files/
 downloaded-images/
 google-images-pages-json/
 image-urls/
+vendor/
 .env
