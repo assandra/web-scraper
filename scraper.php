@@ -8,9 +8,9 @@ $dotenv->load();
 $apiKey = $_ENV["SERPwOW_API_KEY"];
 
 # Parameters 
-$god = 'hades';
+$god = 'hephaestus';
 $startPageNum = 1;
-$endPageNum = 1;
+$endPageNum = 5;
 
 foreach (range($startPageNum, $endPageNum) as $pageNum) {
 
@@ -18,12 +18,12 @@ foreach (range($startPageNum, $endPageNum) as $pageNum) {
   $response = request("https://api.serpwow.com/live/search?api_key={$apiKey}&q={$god}+statue&search_type=images&images_page={$pageNum}");
   
   # Save response
-  # $responseFile = "./google-images-pages-json/google-{$god}-page-{$pageNum}.json";
-  # file_put_contents($responseFile, $response);
+  $responseFile = "./google-images-pages-json/google-{$god}-page-{$pageNum}.json";
+  file_put_contents($responseFile, $response);
 
   # Optional - load response from responseFile
-  $responseFile= "./google-images-pages-json/google-{$god}-page-{$pageNum}.json";
-  $response = file_get_contents($responseFile);
+  # $responseFile= "./google-images-pages-json/google-{$god}-page-{$pageNum}.json";
+  # $response = file_get_contents($responseFile);
 
   $decodedResponse = json_decode($response, true);
   
@@ -54,7 +54,6 @@ foreach (range($startPageNum, $endPageNum) as $pageNum) {
 
     $downloadedImage = request($imageUrl); 
 
-    var_dump($downloadedImage);
     $jpgExtPos = strpos($imageUrl, ".jpg");
     $pngExtPos = strpos($imageUrl, ".png");
     
