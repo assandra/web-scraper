@@ -7,6 +7,7 @@
         }
     ],
     "require": {
-        "vlucas/phpdotenv": "^5.0"
+        "vlucas/phpdotenv": "^5.0",
+        "simplehtmldom/simplehtmldom": "2.0-RC2"
     }
 }
