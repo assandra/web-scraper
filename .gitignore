@@ -7,7 +7,7 @@ google-images-pages-json/*
 image-urls/*
 !image-urls/.gitkeep
 
-log/*
+logs/*
 !logs/.gitkeep
 
 vendor/
