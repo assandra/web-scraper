@@ -10,5 +10,8 @@ image-urls/*
 logs/*
 !logs/.gitkeep
 
+scan-the-world-images/*
+!scan-the-world-images/.gitkeep
+
 vendor/
 .env
