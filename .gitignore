@@ -1,15 +1,14 @@
+downloaded-images/*
+!downloaded-images/.gitkeep
 
-# downloaded-images/*
-# !downloaded-images/.gitkeep
+google-images-pages-json/*
+!google-images-pages-json/.gitkeep
 
-# google-images-pages-json/*
-# !google-images-pages-json/.gitkeep
+image-urls/*
+!image-urls/.gitkeep
 
-# image-urls/*
-# !image-urls/.gitkeep
-
-# log/*
-# !logs/.gitkeep
+log/*
+!logs/.gitkeep
 
 vendor/
 .env
