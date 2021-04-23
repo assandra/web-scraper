@@ -8,6 +8,9 @@ logs/*
 !logs/.gitkeep
 scan-the-world-images/*
 !scan-the-world-images/.gitkeep
+outputs/*
+!outputs/.gitkeep
 vendor/
+additional-files/*.zip
 .env
 composer.phar

@@ -8,7 +8,7 @@ $dotenv->load();
 $apiKey = $_ENV["SERPwOW_API_KEY"];
 
 # Parameters 
-$gods = ["achlys", "aether", "aion", "ananke", "erebus", "gaia", "hemera", "nemesis", "nesoi", "nyx", "ourea", "phanes", "pontus", "tartarus", "moros", "thanatos"];
+$gods = ["nemesis", "nesoi", "nyx", "ourea", "phanes", "pontus", "tartarus", "moros", "thanatos"];
 $startPageNum = 1;
 $endPageNum = 5;
 
