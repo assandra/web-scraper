@@ -6,11 +6,11 @@ use simplehtmldom\HtmlWeb;
 $client = new HtmlWeb();
 
 # TODO: make this a cli application which takes filename as an option
-$fileName = "./additional-files/scan_the_world_objects.csv";
+$fileName = "/home/a/Projects/web-scraper/web-scraper/structured-stw-files/random.csv";
 $file = fopen($fileName, "r");
 
 while (($line = fgetcsv($file)) !== FALSE) {
-    $urls[] = $line[0];
+    $urls[] = $line[1];
 }
 
 fclose($file);
@@ -23,15 +23,18 @@ foreach ($urls as $url) {
         continue;
     }
     
+    $objectId = substr(strrchr($url, '/'), 1);
+    
     $numImagesDownloaded = 0;
     foreach($html->find('img[class=prdimg-gallery]') as $element) {
+        
         $imageUrl = $element->src;
+ 
         $originalImageUrl = str_replace("/70X70-", "/720X720-", $imageUrl);
         $downloadedImage = request($originalImageUrl); 
-
         $startImageNamePos = strpos($originalImageUrl, "/720X720-");
-        $originalImageName = "720x720-" . substr($originalImageUrl, $startImageNamePos  + 9);
-        $imageName = "./scan-the-world-images/{$originalImageName}";
+        $originalImageName = "720x720-" . $objectId . "-" . uniqid() . "-" .  substr($originalImageUrl, $startImageNamePos  + 9);
+        $imageName = "./random/{$originalImageName}";
      
         file_put_contents($imageName, $downloadedImage); 
         $numImagesDownloaded++;

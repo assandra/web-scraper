@@ -14,3 +14,8 @@ vendor/
 additional-files/*.zip
 .env
 composer.phar
+busts/
+fullbody/
+random/
+structured-stw-files/
+new-scan-the-world-files/

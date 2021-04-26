@@ -1,5 +1,5 @@
 #!/bin/bash
-FILES=/home/a/Projects/web-scraper/downloaded-images/*
+FILES=/home/a/Projects/web-scraper/web-scraper/fullbody/*
 for f in $FILES
 do
 

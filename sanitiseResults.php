@@ -1,6 +1,6 @@
 <?php
 
-$handle= fopen("./outputs/second-round-downloaded-images-properties.txt", "r");
+$handle= fopen("/home/a/Projects/web-scraper/web-scraper/fullbody-file-properties.txt", "r");
 if ($handle) {
     while (($line = fgets($handle)) !== false) {
         $imageNameEndPos = strpos($line, ":");

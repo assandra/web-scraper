@@ -1,10 +1,11 @@
 <?php
 
 # Get all file from source dir
-$sourceDir = "tag-classified-busts";
+$sourceDir = "/home/a/Projects/web-scraper/web-scraper/fullbody";
 $files = getFiles($sourceDir);
-
-echo "Do assertion on number of files retrieved";
+$numOfFiles = count($files);
+echo "Total number of updated files needs to equal = 13708, actual = {$numOfFiles}";
+die();
 
 # Make target dirs
 $targetDir = "base-dir";
